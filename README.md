@@ -72,7 +72,7 @@ If you had an Excel sheet containing a column with a title cell 'index' with inc
 
 `index, doubled = df['index'], df['doubled']`
 
-... giving you two lists which now contain their respective columns
+... giving you two lists which now contain their respective columns. Try to `print()` one of them and see how it looks.
 
 NOTE: in Python you can assign multiple things in the same line like above and below: 
 
