@@ -14,7 +14,7 @@ In a Jupyter notebook file, use Python's `import` statement to obtain the 'tools
 
 `import moduleName as alias`
 
-Where `alias` is usually just a convenient name that you would give to a module that you expect to use often, so you don't have to keep typing it. For example, since we'll use `matplotlib.pyplot` a couple times, let's load the module like this:
+Where `alias` is usually just a convenient name that you would give to a module that you expect to use often, so you don't have to keep typing the long name. For example, since we'll use `matplotlib.pyplot` a couple times, let's load the module like this:
 
 `import matplotlib.pyplot as plt`
 
@@ -23,14 +23,16 @@ Now, when we want to use a function that comes from the `matplotlib.pyplot` modu
 NOTE: The common alias for `pandas` is `pd`
 
 #### Common use of matplotlib
-Here are a few of the `plt` functions that I find myself using often while creating basic data visualizations. I've linked the corresponding documentation pages on each function, since reading the documentation pages for Python modules (and generally all open-source programming packages) is usually the most direct way to learn (or remember) how to use them.
+Here are a few of the `plt` functions that I find myself using often while creating basic data visualizations. I've linked the corresponding documentation pages on each function, since reading the documentation pages for Python modules is usually the most direct way to learn (or remember) how to use them.
 
 [`plt.plot()`](https://matplotlib.org/3.2.1/api/_as_gen/matplotlib.pyplot.plot.html)
 
-How exactly `plt` creates the figure and artist object is not super important to basic usage, but essentially you supply the independent and dependent data variables (which need to be the same size, i.e. 5 years of time requires 5 years of data) and the function returns an image of the plot. This is where Jupyter Notebook is convenient, as the image is returned to the output right beneath your input cell. This function can take additional arguments that specify the type of marker, transparency, and/or labels, and the argument key words can found on the docs. Ones of particular interest are:
+How exactly `plt` creates the figure and artist object is not super important to basic usage, essentially you supply the independent and dependent data variables (which need to be the same size, i.e. 5 years of time requires 5 years of data) and the function returns an image of the plot. This is where Jupyter Notebook is convenient, as the image is returned to the output right beneath your input cell. This function can take additional arguments that specify the type of marker, transparency, and/or labels, and the argument key words can found on the docs. Ones of particular interest are:
 
 - `label='labelName'`
-- `'g-'` : this is a stand-alone argument that specifies that data points should be strung together into a line (`-`) and that it should be green (`g`). A black scatter plot would be supplied a `'k.'` and a red, dashed line plot would be supplied `'r-.'`
+- `'g-'`
+
+The second example is an argument that specifies that data points should be strung together into a line (`-`) and that it should be green (`g`). A black scatter plot would be supplied a `'k.'` and a red, dashed line plot would be supplied `'r-.'`
 
 [`plt.figure()`](https://matplotlib.org/3.2.1/api/_as_gen/matplotlib.pyplot.figure.html)
 
@@ -44,9 +46,11 @@ This function creates a legend for the plot figure that you are working on. Ever
 
 These functions do exactly what you think, specify the axis labels and title of a given figure's plot. To include *LaTeX* type characters in these labels, just enclose the characters (e.g. greek letter or math expression) within a dollar sign like the following example:
 
-- sample title: `plt.title('Plot of the function $y = e^{i \pi x} $')` gives the following title: Plot of the function ![formula](https://render.githubusercontent.com/render/math?math=y%20=%20e^{i%20\pi%20x}) 
+`plt.title('Plot of the function $y = e^{i \pi x} $')` 
 
-Notice that any text and/or LaTeX expressions have to be a *string*, meaning that is interpreted as text by Python. Anything within single or double quotes will be interpreted as a string.
+... gives the following title: **Plot of the function ![formula](https://render.githubusercontent.com/render/math?math=y%20=%20e^{i%20\pi%20x})**
+
+Notice that the arguments to these functions are text and/or LaTeX expressions interpreted as *strings*, meaning that Python sees them as text. Anything within single or double quotes will be interpreted as a string.
 
 #### Common use of pandas
 
@@ -56,17 +60,15 @@ For someone interested in basic visualization data using CSVs and Excel datafile
 
 To load .xls (other Excel file extentions can be handled), you can use:
 
-`df = pd.read_excel(filename)`
+`df = pd.read_excel('filename.xls')`
 
-You can supply an extra arugment `sheet_name=0` to load only the first sheet of the excel workbook or simply use the specified name of the excel sheet.
-
-There are corresponding methods of `pandas` for .csv and .txt (or dat files without extensions), which funcition similarly and are called `read_csv()` and `read_fwf()` respectively.
+You can supply an extra arugment `sheet_name=0` to load only the first sheet of the excel workbook or simply use the specified name of the excel sheet. There are corresponding methods of `pandas` for .csv and .txt (or dat files without extensions), which funcition similarly and are called `read_csv()` and `read_fwf()` respectively.
 
 You can check to see how your new `df` looks by running `print(df)` in Jupyter or just `print(df.head)` to see the top. If you don't see all your data after printing your whole `df`, don't worry. Pandas will show the extremities of your dataset for the sake of brevity.
 
-Now that we have the data loaded, we can do lots of stuff quickly. If by chance all your data was ordered into chronological columns and you just need to see it, plot everything against the `df` index using `df.plot()` (`pandas` is built on top of `matplotlib` so it uses its plotting functionality). I usually find it easier to *hash* out the data you want to plot from the `df` and then use `matplotlib` directly, as shown below in the example.
+Now that we have the data loaded, we can do lots of stuff quickly. If by chance all your data was ordered into chronological columns and you just need to see it, plot everything against the `df` index using `df.plot()` (`pandas` is built on top of `matplotlib` so it uses its plotting functionality). I usually find it easier to *hash* out the data you want to plot from the `df` and then use `matplotlib` directly, as shown below:
 
-If you had an Excel sheet containing a column called 'index' with increasing numbers 1, 2, 3, ... , 10 and another column 'doubled' with 2, 4, 6, ... , 10 then to extract these into a list you could write:
+If you had an Excel sheet containing a column with a title cell 'index' with increasing numbers 1, 2, 3, ... , 10 and another column 'doubled' with 2, 4, 6, ... , 10 then to extract these into a list you could write:
 
 `index, doubled = df['index'], df['doubled']`
 
@@ -82,7 +84,7 @@ At this point, you can plot these lists (which should be equally sized if the ra
 
 ### Tasks
 #### SETUP
-First, get the datafile by running the following commands from a folder that you'd like to work from:
+First, get the datafile by running the following command from a folder that you'd like to work from:
 
 `wget https://raw.githubusercontent.com/zzstoatzz/birdo/master/L1/GhanaPineapples.xls`
 
@@ -106,7 +108,7 @@ Remember that once you've loaded your data you can use `print(df.head)` to look 
 
 `c1, c2, c3 = df.columns`
 
-where here the datafile had 3 columns. Use these when hashing (extracting data from the `df`)
+where the datafile had 3 columns. When hashing/extracting data from the `df`, use these variables as an alias for the clunky column names on the actual datafile (e.g. 'Production (tonnes)')
 
 #### TASKS
 
