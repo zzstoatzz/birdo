@@ -108,12 +108,11 @@ Remember that once you've loaded your data you can use `print(df.head)` to look 
 
 `c1, c2, c3 = df.columns`
 
-where the datafile had 3 columns. When hashing/extracting data from the `df`, use these variables as an alias for the clunky column names on the actual datafile (e.g. 'Production (tonnes)')
+where the datafile had 3 columns. When hashing/extracting data from the `df`, use these variables as an alias for the clunky column names on the actual datafile (e.g. 'Production (tonnes)').
 
 #### TASKS
-
 #### Task 1: Extract and Plot 
-Show the time evolution of pineapple **production** in Ghana across the timescale of years provided. Title & label axes appropriately and include a legend.
+Show the time evolution of pineapple **production** in Ghana across the timescale of years provided. For readability, you can label the y-axis in thousands of tonnes rather than tonnes (700,000 to 70k). Title & label axes appropriately and include a legend.
 
 #### Task 2: Manipulate Extracted Data
 Use `plt.bar()`, which works basically the same way as `plt.plot()` to create a bar chart showing the annual pineapple yield, i.e. the **Production** per **Area Harvested** across the timescale. Title, label and add a legend to your plot as before.
