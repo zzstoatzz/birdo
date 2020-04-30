@@ -1,7 +1,10 @@
 # Exercise Descriptions
 Here I will describe each task and list necessary concepts, tips / tricks, and expected output.
 
-## Importing modules to visualize data
+Exercise Quicklinks:
+- [Exercise 1](##-Importing-modules-and-basic-pandas-/-matplotlib)
+
+## Importing modules and basic pandas / matplotlib
 April 29, 2020
 
 ### Background
