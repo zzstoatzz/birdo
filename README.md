@@ -88,7 +88,7 @@ First, get the datafile by running the following command from a folder that you'
 
 `wget https://raw.githubusercontent.com/zzstoatzz/birdo/master/L1/GhanaPineapples.xls`
 
-This is a small dataset related to pineapple farming in Ghana, used in a Hope Michelson publication. The data we're using is part of what was used in the figure below:
+This is a small dataset related to pineapple farming in Ghana, used in a Hope Michelson publication that investigate the farming, wide-scale production, and participants of the pineapple market in Ghana:
 
 <p align="center"><img height="400" src="imgs/GPtrends.png" /></p>
 
