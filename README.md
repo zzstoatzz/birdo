@@ -2,7 +2,7 @@
 Here I will describe each task and list necessary concepts, tips / tricks, and expected output.
 
 ## Importing modules to visualize data
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; April 29, 2020
+April 29, 2020
 
 ### Background
 Here we will use some very common Python 'modules' to load and plot some data, namely:
@@ -86,9 +86,7 @@ First, get the datafile by running the following commands from a folder that you
 
 `wget https://raw.githubusercontent.com/zzstoatzz/birdo/master/L1/GhanaPineapples.xls`
 
-This is a small dataset related to pineapple farming in Ghana, used in a Hope Michelson publication.
-
-Then create a new .ipynb notebook file in that directory and import the modules as directed in the Background.
+This is a small dataset related to pineapple farming in Ghana, used in a Hope Michelson publication. Then create a new .ipynb notebook file in that directory and import the modules as directed in the Background.
 
 **protip:** create a cell at the top of your notebook and copy in these commands for high resolution and wide working space:
 
@@ -109,14 +107,10 @@ where here the datafile had 3 columns. Use these when hashing (extracting data f
 #### TASKS
 
 #### Task 1: Extract and Plot 
-Show the time evolution of pineapple **production** in Ghana across the timescale of years provided. 
-
-Title & label axes appropriately and include a legend.
+Show the time evolution of pineapple **production** in Ghana across the timescale of years provided. Title & label axes appropriately and include a legend.
 
 #### Task 2: Manipulate Extracted Data
-Use `plt.bar()`, which works basically the same way as `plt.plot()` to create a bar chart showing the annual pineapple yield, i.e. the **Production** per **Area Harvested** across the timescale.
-
-Title, label and add a legend to your plot as before.
+Use `plt.bar()`, which works basically the same way as `plt.plot()` to create a bar chart showing the annual pineapple yield, i.e. the **Production** per **Area Harvested** across the timescale. Title, label and add a legend to your plot as before.
 
 **HINT:** if `x = [4, 6, 8]` and `y = [2, 3, 4]` then `z = x/y` returns `z = [2, 2, 2]`
 
