@@ -111,7 +111,7 @@ Remember that once you've loaded your data you can use `print(df.head)` to look 
 
 `c1, c2, c3 = df.columns`
 
-where the datafile had 3 columns. When hashing/extracting data from the `df`, use these variables as an alias for the clunky column names on the actual datafile (e.g. 'Production (tonnes)').
+where the datafile had 3 columns. When hashing/extracting data from the `df`, use these variables as an alias for the clunky column names on the actual datafile (e.g. `prod` for 'Production (tonnes)').
 
 #### TASKS
 #### Task 1: Extract and Plot 
