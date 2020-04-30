@@ -88,7 +88,7 @@ First, get the datafile by running the following commands from a folder that you
 
 This is a small dataset related to pineapple farming in Ghana, used in a Hope Michelson publication. The data we're using is part of what was used in the figure below:
 
-<p align="center"><img height="400" src="birdo/imgs/GPtrends.png"/></p>
+<p align="center"><img height="400" src="imgs/GPtrends.png" /></p>
 
 Then create a new .ipynb notebook file in that directory and import the modules as directed in the Background.
 
