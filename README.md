@@ -129,7 +129,7 @@ Look up how to use  `df.iterrows()` and create new list outside the `df` represe
 if row[flag] == '':
     do nothing
 else:
-    row[key] = interpolated value
+    row[prod] = interpolated value
 ```
 Since you'll be iterating through the `df`, you'll want a copy of the production values list that isn't being changed. Use the `i` iterator value to index your copy of the list that's stored outside the `for` loop and get the years before and after any given year like:
 
