@@ -158,8 +158,12 @@ Create a GitHub account, create a repo for this and upcoming excersies (maybe ca
 <hr>
 <hr>
 
-# Exercise 2
+# Exercise 2 
+
 ## Crystal diffraction as a vehicle for learning `pandas` & `list` comprehension 
+June 11, 2020
+
+<hr>
 
 ### Background
 
