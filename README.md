@@ -1,4 +1,4 @@
-# Exercise Descriptions
+Problem 10. War-Shall We? # Exercise Descriptions
 Here I will describe each task and list necessary concepts, tips / tricks, and expected output.
 
 Exercise Quicklinks:
@@ -301,6 +301,10 @@ def sinTheta(D, L):             # can be D1 or D2, works for both
 	t = 1/2*(np.arctan(D/2/L))  # this the 'Bragg Angle'
 	return np.sin(t)            # gives radians, not degrees
 ```
+
+Here we will use this hypothetical physical setup to experimentally determine what the diameter ratio should be, using the fact that the first coefficient of the fit between the above expressions is equal to:
+
+<p align="center"><img height="100" src="imgs/slope.png" /></p>
 
 ##### Physical constants you will use
 ```python 
