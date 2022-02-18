@@ -1,9 +1,6 @@
-Problem 10. War-Shall We? # Exercise Descriptions
-Here I will describe each task and list necessary concepts, tips / tricks, and expected output.
-
 Exercise Quicklinks:
-- [Exercise 1](#-Exercise-1)
-- [Exercise 2](#-Exercise-2)
+- [Exercise 1](#exercise-1)
+- [Exercise 2](#exercise-2)
 <hr>
 <hr>
 
