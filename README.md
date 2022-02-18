@@ -241,7 +241,7 @@ for element in elements:
 In most cases, it's quicker and more readable if you use list comprehension. The syntax goes:
 
 ```python
-# say
+# say for example we have a function
 def f(list_element):
    # imagine it does something interesting
    result_from_list_element = list_element
