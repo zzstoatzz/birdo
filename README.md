@@ -256,7 +256,7 @@ conditionalList = [f(i) if condition else altValue for i in somethingIterable]
 # conditional inclusion list comprehension
 selectiveList = [f(i) for i in somethingIterable if condition]
 
-edit from the future:
+# edit from the future:
 use mapping too!
 
 def my_func(x: Any) -> Any: return x
