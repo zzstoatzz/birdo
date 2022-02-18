@@ -245,7 +245,7 @@ In most cases, it's quicker and more readable if you use list comprehension. The
 list = [f(i) for i in somethingIterable]
 
 # conditional list comprehension
-pickyList = [f(i) for i in somethingIterable if condition else altValue]
+pickyList = [f(i) if condition else altValue for i in somethingIterable]
 ```
 
 Where `f(i)` can be literally anything, and `altValue` is the value added to the list if `condition` is false. Here are the same three examples as above, this time using list comprehension:
