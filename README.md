@@ -244,7 +244,7 @@ In most cases, it's quicker and more readable if you use list comprehension. The
 # say
 def f(list_element):
    # imagine it does something interesting
-   result_from_list_element = i
+   result_from_list_element = list_element
    return result_from_list_element
 
 # basic list comprehension
